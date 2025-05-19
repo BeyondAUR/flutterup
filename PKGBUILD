@@ -12,6 +12,8 @@ makedepends=('rust')
 source=("flutterup-v${pkgver}.tar.gz::https://github.com/BeyondAUR-Upstream/flutterup/archive/refs/tags/v${pkgver}.tar.gz")
 sha256sums=('bfe6a8757b7cb12482df09a4040a0bf4fe40d4cece0b182cb7a3fdf3120e02ae')
 
+export RUSTUP_TOOLCHAIN=1.86.0
+
 build() {
   cd ${pkgname}-$pkgver
   cargo build --release
