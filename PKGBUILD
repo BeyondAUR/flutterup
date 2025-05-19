@@ -24,6 +24,6 @@ package() {
   install -Dm0755 -t "${pkgdir}/usr/bin/" "target/release/${pkgname}"
   install -D -m644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 
-  ln -sr "${pkgdir}/usr/bin/dart" ${pkgname}
-  ln -sr "${pkgdir}/usr/bin/flutter" ${pkgname}
+  ln -sr ${pkgname} "${pkgdir}/usr/bin/dart"
+  ln -sr ${pkgname} "${pkgdir}/usr/bin/flutter"
 }
