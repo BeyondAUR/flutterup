@@ -1,6 +1,6 @@
 pkgname=flutterup
 pkgver=0.2.5
-pkgrel=1
+pkgrel=2
 pkgdesc='A flutter wrapper, to install and package flutter packages'
 arch=('x86_64' 'aarch64')
 url='https://github.com/Decodetalkers/flutterup'
@@ -24,6 +24,6 @@ package() {
   install -Dm0755 -t "${pkgdir}/usr/bin/" "target/release/${pkgname}"
   install -D -m644 LICENSE -t "${pkgdir}/usr/share/licenses/${pkgname}/"
 
-  ln -sr ${pkgname} "${pkgdir}/usr/bin/dart"
-  ln -sr ${pkgname} "${pkgdir}/usr/bin/flutter"
+  ln -s "/usr/bin/flutterup" "${pkgdir}/usr/bin/dart"
+  ln -s "/usr/bin/flutterup" "${pkgdir}/usr/bin/flutter"
 }
