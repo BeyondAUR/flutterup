@@ -1,6 +1,6 @@
 pkgname=flutterup
 pkgver=0.2.5
-pkgrel=1.0
+pkgrel=1
 pkgdesc='A flutter wrapper, to install and package flutter packages'
 arch=('x86_64' 'aarch64')
 url='https://github.com/Decodetalkers/flutterup'
